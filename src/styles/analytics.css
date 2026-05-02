@@ -1,0 +1,19 @@
+.analytics-cards {
+    padding: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card{
+    border-radius: 15px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: center;
+}
+
+.card-value{
+    font-size: 30px;
+    font-weight: 900;
+    color: #5eabf4;
+}

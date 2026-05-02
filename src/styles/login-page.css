@@ -1,0 +1,158 @@
+.page-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: white; /*#f5f5dc;*/
+    color: #6e5849;
+    height: 100vh;
+}
+
+.page-container p{
+    font-family: calibri;
+    margin: 5px;
+}  
+
+.welcome-tag{
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.desc-tag{
+    font-size: 20px;
+    font-weight: 400;
+}  
+
+.instruction-tag{
+    font-size: 18px;
+    font-weight: 300;
+    text-align: center;
+    max-width: 400px;
+}
+
+.login-container{
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    align-items: center;
+    font-family: calibri;
+    color: #6e5849;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.user-icon{
+    height: 60px;
+    width: 60px;
+}
+
+.title{
+    font-weight: 100;
+    font-family: calibri;
+    text-align: center;
+}
+
+.login-container form{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+}
+
+.text-input{
+    height: 45px;
+    width: 100%;
+    background-color: white;
+    border: 2px solid #6e5849;
+    border-radius: 8px;
+    padding-left: 10px;
+    padding-right: 45px;
+    margin: 10px 0;
+    box-sizing: border-box;
+}
+
+.password-field {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.password-field .text-input {
+    padding-right: 45px;
+}
+
+.eye-icon {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #728c69;
+}
+
+.login-container label{
+    font-size: 18px;
+}
+
+.login-btn{
+    height: 40px;
+    width: 100%;
+    margin: 20px 0;
+    border: none;
+    background-color: #e9967a;
+    color: white;
+    font-size: 15px;
+    letter-spacing: 2px;
+    border-radius: 8px;
+}
+
+.login-btn:hover{
+    cursor: pointer;
+}
+
+.links label{
+    cursor: pointer;
+}
+
+/* @media screen and (max-width:600px) {
+    .container .text-input{
+        height: 35px;
+        width: 250px;
+    }
+
+    .login-btn{
+        height: 40px;
+        width: 100%;
+    }
+
+} */
+
+@media (max-width: 600px) {
+
+    .login-container {
+        padding: 25px;
+        width:250px;
+    }
+
+    .login-container form {
+        max-width: 100%;
+    }
+
+    .title {
+        font-size: 24px;
+    }
+
+    .text-input {
+        height: 40px;
+        font-size: 14px;
+    }
+
+    .login-btn {
+        height: 45px;
+        font-size: 14px;
+    }
+
+    .user-icon {
+        height: 50px;
+        width: 50px;
+    }
+}
