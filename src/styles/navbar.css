@@ -1,24 +1,23 @@
-.navbar-container{
+.navbar-container {
     background: white;
-    /* height: 100vh; */
 }
 
-.navbar{
-    display:flex;
+.navbar {
+    display: flex;
     flex-direction: row;
-    height: 65px;
-    background-color: #e9967a;
-    width:100%;
-    position:sticky;
-    top:0px;
+    height: 65px; 
+    background-color: #1f3a5f;
+    width: 100%;
+    position: sticky;
+    top: 0;
 }
 
-.logo{
+.logo {
     display: flex;
     align-items: center;
 }
 
-.logo-title{
+.logo-title {
     color: white;
     font-size: 24px;
     margin-left: 20px;
@@ -26,20 +25,53 @@
     letter-spacing: 2px;
 }
 
-.nav-links{
+.nav-links {
     display: flex;
     align-items: center;
     margin-left: auto;
     margin-right: 20px;
 }
 
-.nav-links p{
+.nav-links p {
     color: white;
-    text-decoration: none;
-    margin-left: 20px;
+    margin: 0 15px; 
     font-size: 18px;
     cursor: pointer;
     letter-spacing: 1px;
-    margin: 20px;
-    transition: color 0.3s ease;
+}
+
+.hamburger {
+    display: none;
+    font-size: 26px;
+    color: white;
+    margin:10px 20px 0 0;
+    cursor: pointer;
+    margin-left: auto;
+    align-items: center;
+}
+
+@media (max-width: 700px) {
+
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 65px; 
+        left: 0;   
+        background-color: #e9967a;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        display: none;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links p {
+        margin: 15px 0;
+    }
 }

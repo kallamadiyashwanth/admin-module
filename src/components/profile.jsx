@@ -11,19 +11,22 @@ const Profile = () => {
 
     if (!currentUser) {
         return (
+            <>
+            <Navbar />
             <div className="profile-container">
-                <Navbar />
                 <h2 className="no-user">Please login to view your profile</h2>
                 <p onClick={() => navigate('/')} className="user-login-link">
                     Click here to Login
                 </p>
             </div>
+            </>
         );
     }
 
     return (
+        <>
+        <Navbar />
         <div className="profile-container">
-            <Navbar />
 
             <div className="profile-card">
                 <h1 className="profile-title">User Profile</h1>
@@ -60,6 +63,7 @@ const Profile = () => {
                 </div>
             </div>
         </div>
+        </>
     );
 };
 

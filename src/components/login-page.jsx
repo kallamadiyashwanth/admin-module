@@ -47,7 +47,7 @@ const Login = () => {
     return (
         <>
             <div className="page-container">
-                <p className='welcome-tag'>Welcome to EduCore Academy</p>
+                <p className='welcome-tag'>Welcome to EduCore Tutors</p>
                 {/* <p className='desc-tag'>Empowering your Learning Journey</p> */}
                 <p className='instruction-tag'>Kindly login to access your personalized dashboard and explore our courses</p>
                 <div className="login-container">

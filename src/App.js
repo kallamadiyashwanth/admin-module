@@ -2,7 +2,8 @@ import Login from "./components/login-page";
 import Profile from "./components/profile";
 import Analytics from "./components/analytics";
 import Courses from "./components/courses";
-import Dashboard from "./components/dashboard";
+import Dashboard from "./components/dashboard";   
+import Contact from "./components/contact";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         <Route path="/profile" element={<Profile />} />
         <Route path="/analytics" element={<Analytics />} />
         <Route path="/courses" element={<Courses />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
     </BrowserRouter>
   );
