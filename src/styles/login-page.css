@@ -4,7 +4,7 @@
     justify-content: center;
     align-items: center;
     background: white; /*#f5f5dc;*/
-    color: #6e5849;
+    color: #3e5172;
     height: 100vh;
 }
 
@@ -16,6 +16,7 @@
 .welcome-tag{
     font-size: 28px;
     font-weight: 600;
+    text-align: center;
 }
 
 .desc-tag{
@@ -34,10 +35,11 @@
     display: flex;
     flex-direction: column;
     padding: 40px;
+    border-radius: 15px;
     align-items: center;
     font-family: calibri;
-    color: #6e5849;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    color: #3e5172;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 .user-icon{
@@ -49,6 +51,7 @@
     font-weight: 100;
     font-family: calibri;
     text-align: center;
+    color: #3e5172;
 }
 
 .login-container form{
@@ -61,8 +64,8 @@
     height: 45px;
     width: 100%;
     background-color: white;
-    border: 2px solid #6e5849;
-    border-radius: 8px;
+    border: 2px solid #3e5172;
+    border-radius: 10px;
     padding-left: 10px;
     padding-right: 45px;
     margin: 10px 0;
@@ -86,7 +89,7 @@
     top: 50%;
     transform: translateY(-50%);
     cursor: pointer;
-    color: #728c69;
+    color: #3e5172;
 }
 
 .login-container label{
@@ -98,33 +101,33 @@
     width: 100%;
     margin: 20px 0;
     border: none;
-    background-color: #e9967a;
+    background-color: #1f3a5f;
     color: white;
     font-size: 15px;
     letter-spacing: 2px;
-    border-radius: 8px;
+    border-radius: 10px;
 }
 
 .login-btn:hover{
     cursor: pointer;
 }
 
-.links label{
+.guest-login{
+    color: #1f3a5f;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 10px ;
     cursor: pointer;
 }
 
-/* @media screen and (max-width:600px) {
-    .container .text-input{
-        height: 35px;
-        width: 250px;
-    }
+.links{
+    display: flex;
+    justify-content: space-between;
+}
 
-    .login-btn{
-        height: 40px;
-        width: 100%;
-    }
-
-} */
+.links label{
+    cursor: pointer;
+}
 
 @media (max-width: 600px) {
 
@@ -154,5 +157,11 @@
     .user-icon {
         height: 50px;
         width: 50px;
+    }
+
+    .links{
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
     }
 }

@@ -3,33 +3,31 @@ import '../styles/analytics.css';
 import Navbar from "./navbar";
 
 const Analytics = () => {
+
+    const analyticsData = [
+        { title: "Total registered Users", value: "1,234" },
+        { title: "Active Users", value: "567" },
+        { title: "Total Courses", value: "6" },
+        { title: "Enrolled Users", value: "756" },
+        { title: "Course Completion Rate", value: "78%" }
+    ]
+
     return(
+        <>
+        <Navbar />
         <div className="analytics-container">
-            <Navbar />
+            
             {/* <h1 className="analytics-title">Analytics Page</h1> */}
             <div className="analytics-cards">
-                <div className="card">
-                    <h2>Total registered Users</h2>
-                    <p className="card-value">1,234</p>
-                </div>
-                <div className="card">
-                    <h2>Active Users</h2>
-                    <p className="card-value">567</p>
-                </div>
-                <div className="card">
-                    <h2>Total Courses</h2>
-                    <p className="card-value">6</p>
-                </div>
-                <div className="card">
-                    <h2>Enrolled Users</h2>
-                    <p className="card-value">756</p>
-                </div>
-                <div className="card">
-                    <h2>Course Completion Rate</h2>
-                    <p className="card-value">78%</p>
-                </div>
+                {analyticsData.map((data, index) => (
+                    <div className="card" key={index}>
+                        <h2>{data.title}</h2>
+                        <p className="card-value">{data.value}</p>
+                    </div>
+                ))}
             </div>
         </div>
+        </>
     )
 }
 

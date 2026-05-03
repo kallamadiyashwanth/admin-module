@@ -7,9 +7,14 @@
 
 .course-card {
     border-radius: 15px;
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
     padding: 20px;
     text-align: center;
+}
+
+.course-image{
+    width: 100%;
+    border-radius: 15px;
 }
 
 .course-description{
@@ -28,4 +33,35 @@
 .enroll-button{
     color: blue;
     cursor: pointer;
+}
+
+@media (max-width: 1200px) {
+    .courses-container {
+        grid-template-columns: repeat(3, 1fr);
+        padding: 40px;
+    }
+}
+
+/* Tablets */
+@media (max-width: 900px) {
+    .courses-container {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 30px;
+    }
+}
+
+/*  Mobile */
+@media (max-width: 600px) {
+    .courses-container {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    .course-card {
+        padding: 15px;
+    }
+
+    .course-description {
+        font-size: 13px;
+    }
 }
