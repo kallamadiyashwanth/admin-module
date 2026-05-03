@@ -1,6 +1,7 @@
 import React from "react";
 import '../styles/dashboard.css';
 import Navbar from "./navbar";
+import educore from '../media/educore-image.jpg';
 
 const Dashboard = () => {
     return (
@@ -9,6 +10,7 @@ const Dashboard = () => {
             <div className="dashboard-container">
 
                 <h1 className="dashboard-title">EduCore Tutors... Where you can empower your learning journey</h1>
+                <img src={educore} alt="EduCore" className="dashboard-image" />
                 <div className="dummy-text">
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
                         industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and

@@ -10,8 +10,12 @@ const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
 
     const handleLogout = () => {
-        alert("Logged out successfully!");
-        navigate('/');
+        const confirmLogout = window.confirm("Do you want to logout?");
+
+        if (confirmLogout) {
+            navigate('/');
+            alert("Logged out successfully!");
+        }
     };
 
     return(

@@ -44,6 +44,10 @@ const Login = () => {
             alert("Email address is required to reset password.");
     }
 
+    const signUp = () => {
+        alert("Sign up functionality is currently unavailable. Please contact support for assistance.");
+    }
+
     return (
         <>
             <div className="page-container">
@@ -68,8 +72,10 @@ const Login = () => {
                         <button type="submit" className="login-btn">
                             LOGIN
                         </button>
+                        <label className="guest-login" onClick={() => { navigate('/dashboard') }}>Login as Guest</label>
                         <div className="links">
                             <label onClick={forgotPassword}>Forgot Password?</label>
+                            <label onClick={signUp}>Don't have an account?</label>
                         </div>
                     </form>
                 </div>
