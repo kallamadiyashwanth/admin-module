@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faEye, faEyeSlash } from '@fortawesome/free-regular-svg-icons';
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchUsersRequest, setCurrentUser } from "../redux/actions/userActions";
+import { fetchUsersRequest, setCurrentUser, setIsAdmin } from "../redux/actions/userActions";
 
 const Login = () => {
     const navigate = useNavigate();
@@ -12,6 +12,7 @@ const Login = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [showPassword, setShowPassword] = useState(false);
+
     const dispatch = useDispatch();
     const { users } = useSelector((state) => state.user);
 
@@ -22,14 +23,23 @@ const Login = () => {
     }, [dispatch, users.length]);
 
     const handleLogin = () => {
+
+        if(username.toLowerCase() === 'admin' && password === 'admin324') {
+            dispatch(setIsAdmin(true));
+            navigate('/dashboard');
+            alert("Logged in as Admin!");
+            return;
+        }
+
         const loggedInUser = users.find(
-            user => user.username === username && user.password === password
+            user => user.username === username.toLowerCase() && user.password === password
         );
 
         if (!loggedInUser) {
             alert("Invalid username or password");
         } else {
             dispatch(setCurrentUser(loggedInUser));
+            dispatch(setIsAdmin(false));
 
             navigate('/dashboard');
         }

@@ -4,6 +4,5 @@ import { watchFetchUsers } from "./userSaga";
 export default function* rootSaga() {
   yield all([
     watchFetchUsers(),
-    // watchLogin() // ✅ added
   ]);
 }

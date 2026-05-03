@@ -35,10 +35,32 @@
     cursor: pointer;
 }
 
+.admin-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px dashed #ccc; */
+    /* border-radius: 15px; */
+}
+
+.add-course-button {
+    background-color: #4a85d7;
+    font-size: 16px;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
 @media (max-width: 1200px) {
     .courses-container {
         grid-template-columns: repeat(3, 1fr);
         padding: 40px;
+    }
+
+    .admin-card {
+        grid-column: span 3;
     }
 }
 
@@ -47,6 +69,10 @@
     .courses-container {
         grid-template-columns: repeat(2, 1fr);
         padding: 30px;
+    }
+
+    .admin-card {
+        grid-column: span 2;
     }
 }
 
@@ -63,5 +89,9 @@
 
     .course-description {
         font-size: 13px;
+    }
+
+    .admin-card {
+        grid-column: span 1;
     }
 }
