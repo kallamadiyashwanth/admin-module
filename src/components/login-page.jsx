@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faEye, faEyeSlash } from '@fortawesome/free-regular-svg-icons';
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchUsersRequest, setCurrentUser, setIsAdmin } from "../redux/actions/userActions";
+import { fetchUsersRequest, setCurrentUser, setIsAdmin, logoutUser } from "../redux/actions/userActions";
 
 const Login = () => {
     const navigate = useNavigate();
@@ -82,7 +82,7 @@ const Login = () => {
                         <button type="submit" className="login-btn">
                             LOGIN
                         </button>
-                        <label className="guest-login" onClick={() => { navigate('/dashboard') }}>Login as Guest</label>
+                        <label className="guest-login" onClick={() => { dispatch(logoutUser()); navigate('/dashboard') }}>Login as Guest</label>
                         <div className="links">
                             <label onClick={forgotPassword}>Forgot Password?</label>
                             <label onClick={signUp}>Don't have an account?</label>
