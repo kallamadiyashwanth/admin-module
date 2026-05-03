@@ -1,13 +1,11 @@
-// FETCH USERS
 export const FETCH_USERS_REQUEST = "FETCH_USERS_REQUEST";
 export const FETCH_USERS_SUCCESS = "FETCH_USERS_SUCCESS";
 export const FETCH_USERS_FAILURE = "FETCH_USERS_FAILURE";
 
-// AUTH
 export const SET_CURRENT_USER = "SET_CURRENT_USER";
+export const SET_IS_ADMIN = "SET_IS_ADMIN";
 export const LOGOUT_USER = "LOGOUT_USER";
 
-// ACTIONS
 
 export const fetchUsersRequest = () => ({
   type: FETCH_USERS_REQUEST
@@ -23,13 +21,16 @@ export const fetchUsersFailure = (error) => ({
   payload: error
 });
 
-// ✅ LOGIN ACTION
 export const setCurrentUser = (user) => ({
   type: SET_CURRENT_USER,
   payload: user
 });
 
-// ✅ LOGOUT ACTION
+export const setIsAdmin = (isAdmin) => ({
+  type: SET_IS_ADMIN,
+  payload: isAdmin
+});
+
 export const logoutUser = () => ({
   type: LOGOUT_USER
 });

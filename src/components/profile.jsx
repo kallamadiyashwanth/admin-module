@@ -8,16 +8,29 @@ const Profile = () => {
 
     const navigate = useNavigate();
     const { currentUser } = useSelector((state) => state.user);
+    const isAdmin = useSelector((state) => state.user.isAdmin);
 
-    if (!currentUser) {
+    if(!isAdmin)
+        if (!currentUser) {
+            return (
+                <>
+                <Navbar />
+                <div className="no-profile-container">
+                    <h2 className="no-user">Please login to view your profile</h2>
+                    <p onClick={() => navigate('/')} className="user-login-link">
+                        Click here to Login
+                    </p>
+                </div>
+                </>
+            );
+        }
+
+    if(isAdmin) {
         return (
             <>
             <Navbar />
-            <div className="profile-container">
-                <h2 className="no-user">Please login to view your profile</h2>
-                <p onClick={() => navigate('/')} className="user-login-link">
-                    Click here to Login
-                </p>
+            <div className="no-profile-container">
+                <h2 className="admin">Admin users do not have a profile page.</h2>
             </div>
             </>
         );
@@ -65,6 +78,6 @@ const Profile = () => {
         </div>
         </>
     );
-};
+    }
 
 export default Profile;
