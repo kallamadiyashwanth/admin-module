@@ -29,6 +29,10 @@ const Courses = () => {
 
     const isAdmin = useSelector((state) => state.user.isAdmin);
 
+    const navigation = (type) => {
+        navigate("/addcourse", { state: { enrolOrAddCourse: type } });
+    };
+
     return (
         <>
             <Navbar />
@@ -44,15 +48,13 @@ const Courses = () => {
                                 {course.isFree ? 'Free' : 'Paid'}
                                 {course.isFree ? '' : <FontAwesomeIcon icon={faLock} className="course-icon" />}
                             </p>
-                            {course.enrol ? <p className="enroll-button">Enroll</p> : <p className="enroll-button">Watch</p>}
+                            {course.enrol ? <p className="enroll-button" onClick={() => navigation('enroll')}>Enroll</p> : <p className="enroll-button">Watch</p>}
                         </div>
                     </div>
                 ))}
                 {isAdmin && (
                     <div className="admin-card">
-                        <button className="add-course-button" onClick={() => navigate('/addcourse')}>
-                            + Add Course
-                        </button>
+                        <button className="add-course-button" onClick={() => navigation('addCourse')}> + Add Course </button>
                     </div>
                 )}
             </div>

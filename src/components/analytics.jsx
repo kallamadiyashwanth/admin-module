@@ -17,7 +17,9 @@ const Analytics = () => {
         <>
         <Navbar />
         <div className="analytics-container">
-            <PieChart className="pie-chart"/>
+            <div className="analytics-top">
+                <PieChart />
+            </div>
             {/* <h1 className="analytics-title">Analytics Page</h1> */}
             <div className="analytics-cards">
                 {analyticsData.map((data, index) => (

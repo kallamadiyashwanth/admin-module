@@ -1,10 +1,7 @@
 import React, {useState} from "react";
+import '../styles/analytics.css';
 import { AgCharts } from "ag-charts-react";
-import {
-  LegendModule,
-  ModuleRegistry,
-  PieSeriesModule,
-} from "ag-charts-community";
+import { LegendModule, ModuleRegistry, PieSeriesModule, } from "ag-charts-community";
 
 ModuleRegistry.registerModules([LegendModule, PieSeriesModule]);
 
@@ -40,14 +37,11 @@ const PieChart = () => {
         enabled: true,
         position: "right",
         spacing: 5,
-    },
-    padding:{
-      right: 20,
     }
   });
 
   return(
-    <div style={{ width: "600px", margin: "0 auto" }}>
+    <div className="pie-chart-container">
       <AgCharts options={options} />
     </div>
   );
