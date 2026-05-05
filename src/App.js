@@ -4,6 +4,7 @@ import Analytics from "./components/analytics";
 import Courses from "./components/courses";
 import Dashboard from "./components/dashboard";   
 import Contact from "./components/contact";
+import AddCourse from "./components/addcourse";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Route path="/analytics" element={<Analytics />} />
         <Route path="/courses" element={<Courses />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/addcourse" element={<AddCourse />} />
       </Routes>
     </BrowserRouter>
   );
