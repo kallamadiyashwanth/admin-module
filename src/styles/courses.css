@@ -39,8 +39,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /* border: 2px dashed #ccc; */
-    /* border-radius: 15px; */
 }
 
 .add-course-button {
@@ -65,7 +63,6 @@
     }
 }
 
-/* Tablets */
 @media (max-width: 900px) {
     .courses-container {
         grid-template-columns: repeat(2, 1fr);
@@ -77,7 +74,6 @@
     }
 }
 
-/*  Mobile */
 @media (max-width: 600px) {
     .courses-container {
         grid-template-columns: 1fr;

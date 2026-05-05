@@ -4,6 +4,7 @@ import Navbar from "./navbar";
 import { useSelector } from "react-redux";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLock } from "@fortawesome/free-solid-svg-icons";
+import { useNavigate } from "react-router-dom";
 import vuejs from '../media/vuejs.png';
 import angular from '../media/angular.png';
 import react from '../media/reactjs.png';
@@ -13,6 +14,8 @@ import html from '../media/html.png';
 
 
 const Courses = () => {
+
+    const navigate = useNavigate();
 
     const courses = [
         { image: html, title: "HTML", description: "Learn the foundation of web development by structuring web pages using HTML elements, forms, and semantic tags.", isFree: true, enrol: false },
@@ -47,7 +50,7 @@ const Courses = () => {
                 ))}
                 {isAdmin && (
                     <div className="admin-card">
-                        <button className="add-course-button" onClick={() => alert("Add Course functionality would be implemented here.")}>
+                        <button className="add-course-button" onClick={() => navigate('/addcourse')}>
                             + Add Course
                         </button>
                     </div>

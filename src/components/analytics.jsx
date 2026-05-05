@@ -1,6 +1,7 @@
 import React from "react";
 import '../styles/analytics.css';
 import Navbar from "./navbar";
+import PieChart from "./piechart";
 
 const Analytics = () => {
 
@@ -9,19 +10,19 @@ const Analytics = () => {
         { title: "Active Users", value: "567" },
         { title: "Total Courses", value: "6" },
         { title: "Enrolled Users", value: "756" },
-        { title: "Course Completion Rate", value: "78%" }
+        { title: "Course Completions", value: "432" }
     ]
 
     return(
         <>
         <Navbar />
         <div className="analytics-container">
-            
+            <PieChart className="pie-chart"/>
             {/* <h1 className="analytics-title">Analytics Page</h1> */}
             <div className="analytics-cards">
                 {analyticsData.map((data, index) => (
                     <div className="card" key={index}>
-                        <h2>{data.title}</h2>
+                        <h3>{data.title}</h3>
                         <p className="card-value">{data.value}</p>
                     </div>
                 ))}

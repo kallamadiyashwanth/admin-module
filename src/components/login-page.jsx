@@ -62,14 +62,10 @@ const Login = () => {
         <>
             <div className="page-container">
                 <p className='welcome-tag'>Welcome to EduCore Tutors</p>
-                {/* <p className='desc-tag'>Empowering your Learning Journey</p> */}
                 <p className='instruction-tag'>Kindly login to access your personalized dashboard and explore our courses</p>
                 <div className="login-container">
                     <FontAwesomeIcon icon={faUser} className="user-icon" />
                     <h1 className="title">User Login</h1>
-
-                    {/* {loading && <p>Loading users...</p>}
-                    {error && <p>Error: {error}</p>} */}
 
                     <form onSubmit={(e) => { e.preventDefault(); handleLogin(); }}>
                         <label>Username</label>
