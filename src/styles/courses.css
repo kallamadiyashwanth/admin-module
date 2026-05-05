@@ -35,22 +35,45 @@
     cursor: pointer;
 }
 
+.admin-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-course-button {
+    background-color: #4a85d7;
+    font-size: 16px;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    height: 50px;
+}
+
 @media (max-width: 1200px) {
     .courses-container {
         grid-template-columns: repeat(3, 1fr);
         padding: 40px;
     }
+
+    .admin-card {
+        grid-column: span 3;
+    }
 }
 
-/* Tablets */
 @media (max-width: 900px) {
     .courses-container {
         grid-template-columns: repeat(2, 1fr);
         padding: 30px;
     }
+
+    .admin-card {
+        grid-column: span 2;
+    }
 }
 
-/*  Mobile */
 @media (max-width: 600px) {
     .courses-container {
         grid-template-columns: 1fr;
@@ -63,5 +86,9 @@
 
     .course-description {
         font-size: 13px;
+    }
+
+    .admin-card {
+        grid-column: span 1;
     }
 }
