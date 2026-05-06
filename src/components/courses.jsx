@@ -21,16 +21,16 @@ const Courses = () => {
         { image: html, title: "HTML", description: "Learn the foundation of web development by structuring web pages using HTML elements, forms, and semantic tags.", isFree: true, enrol: false },
         { image: css, title: "CSS", description: "Master the art of styling web pages with CSS, including layout techniques, animations, and responsive design.", isFree: true, enrol: false },
         { image: javascript, title: "JavaScript", description: "Dive into the world of JavaScript and learn how to create dynamic and interactive web applications.", isFree: true, enrol: false },
-        { image: react, title: "React", description: "Build modern user interfaces with React, a popular JavaScript library for creating reusable UI components.", isFree: false, enrol: true },
-        { image: vuejs, title: "Vue JS", description: "Explore the flexibility and power of Vue.js, a progressive JavaScript framework for building user interfaces.", isFree: false, enrol: true },
-        { image: angular, title: "Angular", description: "Learn the fundamentals of Angular, a comprehensive framework for building scalable web applications.", isFree: false, enrol: true }
+        { image: react, title: "React", description: "Build modern user interfaces with React, a popular JavaScript library for creating reusable UI components.", isFree: false, enrol: true, price: "$29.99" },
+        { image: angular, title: "Angular", description: "Learn the fundamentals of Angular, a comprehensive framework for building scalable web applications.", isFree: false, enrol: true, price: "$49.99" },
+        { image: vuejs, title: "Vue JS", description: "Explore the flexibility and power of Vue.js, a progressive JavaScript framework for building user interfaces.", isFree: false, enrol: true, price: "$39.99" },
     ];
 
 
     const isAdmin = useSelector((state) => state.user.isAdmin);
 
-    const navigation = (type) => {
-        navigate("/addcourse", { state: { enrolOrAddCourse: type } });
+    const navigation = (type, course) => {
+        navigate("/addcourse", { state: { enrolOrAddCourse: type, course } });
     };
 
     return (
@@ -48,13 +48,13 @@ const Courses = () => {
                                 {course.isFree ? 'Free' : 'Paid'}
                                 {course.isFree ? '' : <FontAwesomeIcon icon={faLock} className="course-icon" />}
                             </p>
-                            {course.enrol ? <p className="enroll-button" onClick={() => navigation('enroll')}>Enroll</p> : <p className="enroll-button">Watch</p>}
+                            {course.enrol ? <p className="enroll-button" onClick={() => navigation('enroll', course)}>Enroll</p> : <p className="enroll-button">Watch</p>}
                         </div>
                     </div>
                 ))}
                 {isAdmin && (
                     <div className="admin-card">
-                        <button className="add-course-button" onClick={() => navigation('addCourse')}> + Add Course </button>
+                        <button className="add-course-button" onClick={() => navigation('addCourse', null)}> + Add Course </button>
                     </div>
                 )}
             </div>

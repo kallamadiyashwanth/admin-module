@@ -55,11 +55,11 @@ const Navbar = () => {
                     <p className="nav-analytics" onClick={() => navigate('/analytics')}>Analytics</p>
                     <p className="nav-profile" onClick={() => navigate('/profile')}>Profile</p>
                     <p className="nav-contact" onClick={() => navigate('/contact')}>Contact</p>
-                    <p className="nav-logout" onClick={handleLogout}>Logout</p>
                     <div className="user-role-container">
                         <p className="role-tag">Role:</p>
                         <p className="user-role">{userRole}</p>
                     </div>
+                    <p className="nav-logout" onClick={handleLogout}>Logout</p>
                 </div>
             </div>
         </div>

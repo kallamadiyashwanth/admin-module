@@ -6,16 +6,32 @@ import '../styles/addcourse.css';
 const AddCourse = () => {
     const navigate = useNavigate();
     const location = useLocation();
-    const { enrolOrAddCourse } = location.state || {};
+    const { enrolOrAddCourse, course } = location.state || {};
 
-    if(enrolOrAddCourse === 'enroll') {
+    if (enrolOrAddCourse === 'enroll') {
         return (
             <>
                 <Navbar />
                 <div className="enroll-container">
                     <h1 className="enroll-title">Course Enrollment</h1>
-                    <p className="enroll-message">You have successfully enrolled in the course!</p>
-                    <button className="back-button" onClick={() => navigate('/courses')}>Back to Courses</button>
+
+                    {course && (
+                        <div className="course-info">
+                            <h2>Course: {course.title}</h2>
+                            <img src={course.image} alt={course.title} className="enroll-image" />
+                            {/* <p>{course.description}</p> */}
+                            {/* <p><strong>Type:</strong> {course.isFree ? "Free" : "Paid"}</p> */}
+                            {!course.isFree && <p><strong>Price:</strong> {course.price}</p>}
+                        </div>
+                    )}
+
+                    {/* <p className="enroll-message">
+                        You have successfully enrolled in the course!
+                    </p> */}
+                    <div className="buttons">
+                        <button className="back-button" onClick={() => navigate('/courses')}> Back to Courses </button>
+                        <button className="payment-button" >Proceed to Payment</button>
+                    </div>
                 </div>
             </>
         );

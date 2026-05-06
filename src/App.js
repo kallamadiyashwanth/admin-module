@@ -1,5 +1,6 @@
 import React, {Suspense, lazy} from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import './App.css';
 
 const Login = lazy(() => import('./components/login-page'));
 const Profile = lazy(() => import('./components/profile'));
@@ -12,7 +13,7 @@ const AddCourse = lazy(() => import('./components/addcourse'));
 const App = () => {
   return (
     <BrowserRouter>
-      <Suspense fallback={<h2>"Loading..."</h2>}>
+      <Suspense fallback={<h2 className="loading-page">"Loading..."</h2>}>
         <Routes>
           <Route path="/" element={<Login />} />
           <Route path="/dashboard" element={<Dashboard />} />
