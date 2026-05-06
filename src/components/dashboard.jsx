@@ -10,7 +10,9 @@ const Dashboard = () => {
             <div className="dashboard-container">
 
                 <h1 className="dashboard-title">EduCore Tutors... Where you can empower your learning journey</h1>
-                <img src={educore} alt="EduCore" className="dashboard-image" />
+                <div className="dashboard-image">
+                    <img src={educore} alt="EduCore" className="dashboard-image" />
+                </div>
                 <div className="dummy-text">
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
                         industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and

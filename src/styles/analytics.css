@@ -1,8 +1,13 @@
+.pie-chart-container{
+    width: 600px;
+    margin: 0 auto;
+}
+
 .analytics-cards {
-    padding: 0 50px;
+    padding: 0 20px;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
 }
 
 .card{
@@ -18,19 +23,12 @@
     color: #5eabf4;
 }
 
-@media (max-width: 992px) {
-    .analytics-cards {
-        grid-template-columns: repeat(4, 1fr);
-        padding: 30px;
-    }
-}
-
 @media (max-width: 600px) {
-    .analytics-cards {
-        grid-template-columns: 1fr;
-        padding: 20px;
-    }
 
+    .pie-chart-container{
+        width: 100%;
+    }
+    
     .card {
         padding: 15px;
     }

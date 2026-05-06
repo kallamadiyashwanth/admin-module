@@ -1,3 +1,86 @@
+.enroll-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.enroll-title {
+    text-align: center;
+    color: #4a85d7;
+    margin-bottom: 20px;
+}
+
+.enroll-message {
+    text-align: center;
+    font-size: 18px;
+    color: #333;
+}
+
+.back-button {
+    display: block;
+    margin: 30px auto 0;
+    padding: 10px 20px;
+    background-color: #4a85d7;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.course-info {
+    text-align: center;
+}
+
+.enroll-image {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.buttons{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.payment-button{
+    display: block;
+    margin: 30px auto 0;
+    padding: 10px 20px;
+    background-color: #4a85d7;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.error-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.error-title {
+    text-align: center;
+    color: red;
+    margin-bottom: 20px;
+}
+
+.error-message {
+    text-align: center;
+    font-size: 18px;
+    color: #333;
+}
+
 .add-course-container {
     max-width: 600px;
     margin: 40px auto;

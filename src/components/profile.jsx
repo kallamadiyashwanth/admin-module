@@ -45,11 +45,7 @@ const Profile = () => {
                 {/* <h1 className="profile-title">User Profile</h1> */}
 
                 <div className="profile-header">
-                    <img
-                        src={currentUser.image} 
-                        alt="profile"
-                        className="profile-img"
-                    />
+                    <img src={currentUser.image} alt="profile" className="profile-img" />
                     <h3>{currentUser.firstName} {currentUser.lastName}</h3>
                     <p>@{currentUser.username}</p>
                 </div>
