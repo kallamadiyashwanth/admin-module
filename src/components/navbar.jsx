@@ -53,9 +53,9 @@ const Navbar = () => {
                 <div className={`nav-links ${menuOpen ? "active" : ""}`}>
                     <p className="nav-courses" onClick={() => navigate('/courses')}>Courses</p>
                     <p className="nav-analytics" onClick={() => navigate('/analytics')}>Analytics</p>
-                    <p className="nav-profile" onClick={() => navigate('/profile')}>Profile</p>
+                    {/* <p className="nav-profile" onClick={() => navigate('/profile')}>Profile</p> */}
                     <p className="nav-contact" onClick={() => navigate('/contact')}>Contact</p>
-                    <div className="user-role-container">
+                    <div className="user-role-container" onClick={() => navigate('/profile')}>
                         <p className="role-tag">Role:</p>
                         <p className="user-role">{userRole}</p>
                     </div>
