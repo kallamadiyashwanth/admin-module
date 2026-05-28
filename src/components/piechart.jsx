@@ -13,7 +13,7 @@ const pieData = [
 ];
 
 const PieChart = () => {
-  const [options, setOptions] = useState({
+  const [options] = useState({
     data: pieData,
     height: 400,
     title: {
