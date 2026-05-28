@@ -28,6 +28,7 @@ const Courses = () => {
 
 
     const isAdmin = useSelector((state) => state.user.isAdmin);
+    const { currentUser } = useSelector((state) => state.user);
 
     const navigation = (type, course) => {
         navigate("/addcourse", { state: { enrolOrAddCourse: type, course } });
@@ -48,7 +49,7 @@ const Courses = () => {
                                 {course.isFree ? 'Free' : 'Paid'}
                                 {course.isFree ? '' : <FontAwesomeIcon icon={faLock} className="course-icon" />}
                             </p>
-                            {course.enrol ? <p className="enroll-button" onClick={() => navigation('enroll', course)}>Enroll</p> : <p className="enroll-button">Watch</p>}
+                            {course.enrol ? <p className="enroll-button" onClick={() => { currentUser ? navigation('enroll', course) : isAdmin ? alert('Course enrollment is for users not admin') : alert('Please login to enroll in this course.') }}>Enroll</p> : <p className="enroll-button">Watch</p>}
                         </div>
                     </div>
                 ))}
