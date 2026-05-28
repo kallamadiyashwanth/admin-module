@@ -1,10 +1,10 @@
-import '../styles/login-page.css';
 import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faEye, faEyeSlash } from '@fortawesome/free-regular-svg-icons';
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchUsersRequest, setCurrentUser, setIsAdmin, logoutUser } from "../redux/actions/userActions";
+import '../styles/login-page.css';
 
 const Login = () => {
     const navigate = useNavigate();
