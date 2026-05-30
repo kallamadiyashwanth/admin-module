@@ -92,8 +92,14 @@
     color: #3e5172;
 }
 
-.login-container label{
+.labels{
     font-size: 18px;
+}
+
+.test-details{
+    font-size: 14px;
+    color: #1f3a5f;
+    text-align: right;
 }
 
 .login-btn{
@@ -114,7 +120,7 @@
 
 .guest-login{
     color: #1f3a5f;
-    font-size: 14px;
+    font-size: 18px;
     text-align: center;
     margin-bottom: 10px ;
     cursor: pointer;

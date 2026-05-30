@@ -68,20 +68,22 @@ const Login = () => {
                     <h1 className="title">User Login</h1>
 
                     <form onSubmit={(e) => { e.preventDefault(); handleLogin(); }}>
-                        <label>Username</label>
+                        <label className='labels'>Username</label>
                         <input className="text-input" type="text" placeholder="Enter Username" value={username} onChange={(e) => setUsername(e.target.value)} />
-                        <label>Password</label>
+                        <label className="test-details">to test: emilys</label>
+                        <label className='labels'>Password</label>
                         <div className="password-field">
                             <input className="text-input" type={showPassword ? "text" : "password"} placeholder="Enter Password" value={password} onChange={(e) => setPassword(e.target.value)} />
                             <FontAwesomeIcon icon={showPassword ? faEyeSlash : faEye} className="eye-icon" onClick={() => setShowPassword(!showPassword)} />
                         </div>
+                        <label className="test-details">to test: emilyspass</label>
                         <button type="submit" className="login-btn">
                             LOGIN
                         </button>
                         <label className="guest-login" onClick={() => { dispatch(logoutUser()); navigate('/dashboard') }}>Login as Guest</label>
                         <div className="links">
-                            <label onClick={forgotPassword}>Forgot Password?</label>
-                            <label onClick={signUp}>Don't have an account?</label>
+                            <label className="labels"onClick={forgotPassword}>Forgot Password?</label>
+                            <label className="labels" onClick={signUp}>Don't have an account?</label>
                         </div>
                     </form>
                 </div>
